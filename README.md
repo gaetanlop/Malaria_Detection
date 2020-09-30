@@ -2,4 +2,4 @@
 
 Dataset:https://www.kaggle.com/iarunava/cell-images-for-detecting-malaria
 
-APP: heroku
+APP: https://malaria-detectorv1.herokuapp.com/
