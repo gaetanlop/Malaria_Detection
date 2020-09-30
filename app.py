@@ -14,11 +14,11 @@ app = Flask(__name__)
 
 
 class_names=['Parasitized','Uninfected']
-
+device = torch.device('cpu')
 model=models.resnet34(pretrained=True)
 model.fc = nn.Linear(512, 2)
 
-model.load_state_dict(torch.load('model.pt'))
+model.load_state_dict(torch.load('model.pt', map_location=device))
 
 def transform_image(image_bytes):
     my_transforms = transforms.Compose([transforms.Resize(256),
