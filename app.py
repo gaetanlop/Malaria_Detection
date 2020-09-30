@@ -19,6 +19,7 @@ model=models.resnet34(pretrained=True)
 model.fc = nn.Linear(512, 2)
 
 model.load_state_dict(torch.load('model.pt', map_location=device))
+model.eval()
 
 def transform_image(image_bytes):
     my_transforms = transforms.Compose([transforms.Resize(256),
