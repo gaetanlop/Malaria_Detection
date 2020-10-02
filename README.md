@@ -47,18 +47,19 @@ Link of the dataset: https://www.kaggle.com/iarunava/cell-images-for-detecting-m
 
 ## Data Augmentation Strategy
 Data Augmentation increases significantly the diversity of images available to train the model. It is a great way to generates new images without collecting new images. These new images are generated from existing ones.
-I simply Resized all the images to 460 by 460 pixels. Then I add aug_transforms for each mini-batch: a fastai method to transforms images using the following transformations: mult=1.0, do_flip=True, flip_vert=False, max_rotate=10.0, min_zoom=1.0, max_zoom=1.1, max_lighting=0.2, max_warp=0.2, p_affine=0.75, p_lighting=0.75, xtra_tfms=None, size=224, mode='bilinear', pad_mode='reflection', align_corners=True, batch=False, min_scale=1.0. This technique was introduced in the fastai course 2020, it is called presizing.
+I decided to use different transforms for the validation set and the training set. 
+* For the training set I Resized all the images to 256*256 pixels, then centercropped the images to 224*224. After that, I applied different transforms: random rotation by 10 degrees, random horizontal and vertical flip with a probability of 50%, then I transformed the Pil Image to a transform, and normalized each channel using Imagenet stats (because I used a pretrained model on Imagenet).
+* For the Validation set, I resized the images then centercropped to 224 by 224 pixels. Then transformed the Pil Images to Tensors and Normalized them.
 
 ## Model Building
-* Used transfer learning (pretrained resnet34). Transfer leaning is a method to initialize the weights of a model based on the weights of another model which was already trained. This technique is good to deal with relatively small datasets like this one. In practice we should nearly always use transfer learning.
+* I used transfer learning (pretrained resnet34). Transfer leaning is a method to initialize the weights of a model based on the weights of another model which was already trained. This technique is good to deal with relatively small datasets like this one. In practice we should nearly always use transfer learning.
 
 ![alt text](https://github.com/gaetanlop/Pneumonia-Detection/blob/master/An-example-of-CNN-architecture.png)
 https://www.researchgate.net/figure/An-example-of-CNN-architecture_fig1_320748406
 
 
-
 ## Model performance
-
+I decided to save my model at each epoch where the validation accuracy increases. I chosed not to save my model when the validation loss decreases following Jeremy Howard advices in his deep learning course. Indeed, validation loss will first get worse during training because the model gets overconfident, and only later will get worse because it is incorrectly memorizing the data. Thus, the most important thing to look at is our metric, here the accuracy.
 
 ![alt text](https://github.com/gaetanlop/Malaria_Detection/blob/master/results%20malaria.PNG)
 ![alt_text](https://github.com/gaetanlop/Malaria_Detection/blob/master/classification%20report%20malaria.PNG)
@@ -66,5 +67,5 @@ https://www.researchgate.net/figure/An-example-of-CNN-architecture_fig1_32074840
 ![alt text](https://github.com/gaetanlop/Malaria_Detection/blob/master/graph%20loss%20malaria.PNG)
 
 ## Productionization and Deployment
-I built a client facing API using Voila and deployed it using Heroku.
+I built a client facing API using Flask and deployed it using Heroku.
 * **Final Product Hosted On Heroku:** https://malaria-detectorv1.herokuapp.com/
