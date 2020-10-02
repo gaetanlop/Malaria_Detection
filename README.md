@@ -45,7 +45,8 @@ Link of the dataset: https://www.kaggle.com/iarunava/cell-images-for-detecting-m
 This project is divided into two part:
 
 * Training a deep learning model using Pytorch. 
-  * Steps: - Data augmentation
+  * Steps: 
+           - Data augmentation
   
            - Data preprocessing: Datasets class, Dataloaders
            
