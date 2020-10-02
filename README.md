@@ -46,6 +46,7 @@ This project is divided into two part:
 
 * Training a deep learning model using Pytorch. 
   * Steps: 
+           
            - Data augmentation
   
            - Data preprocessing: Datasets class, Dataloaders
