@@ -1,5 +1,7 @@
 # Malaria-Detection
 
+## Project Overview
+
 **Final Product Hosted On Heroku:** https://malaria-detectorv1.herokuapp.com/
 
 I created a tool that classifies pediatric chest X-rays to detect pneumonia. One way to depict Penumonia is by using chest X-ray images. They are obtain easily but the problem is in radiologic interpretation of images which are not always available. Therefore, such a tool could be use to predict fast and automatically whether or not someone have pneumonia. 
@@ -15,6 +17,11 @@ I created a tool that classifies pediatric chest X-rays to detect pneumonia. One
 
 
 ![alt text](https://github.com/gaetanlop/Malaria_Detection/blob/master/results%20malaria.PNG)
+
+## Demo
+
+**Final Product Hosted On Heroku:** https://malaria-detectorv1.herokuapp.com/
+![alt text](https://github.com/gaetanlop/Malaria_Detection/blob/master/Malaria%20demo.PNG)
 
 ## About the Data
 Link of the dataset: https://www.kaggle.com/iarunava/cell-images-for-detecting-malaria
