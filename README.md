@@ -41,6 +41,18 @@ Link of the dataset: https://www.kaggle.com/iarunava/cell-images-for-detecting-m
 
 **Python Engineer playlist on Pytorch:** https://www.youtube.com/watch?v=EMXfZB8FVUA&list=PLqnslRFeH2UrcDBWF5mfPGpqQDSta6VK4
 
+## Technical aspects
+This project is divided into two part:
+
+* Training a deep learning model using Pytorch. 
+  * Steps: - 
+           - 
+           - 
+           - 
+* Building and hosting a Flask web app on Heroku.
+  * The user can choose an image from its device.
+  * After uploading the image, the user just have to press predict and the prediction will appear
+
 ## Malaria images Examples
 
 ![alt text](https://github.com/gaetanlop/Malaria_Detection/blob/master/malaria%20data.PNG)
