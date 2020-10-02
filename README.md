@@ -48,7 +48,7 @@ Link of the dataset: https://www.kaggle.com/iarunava/cell-images-for-detecting-m
 ## Data Augmentation Strategy
 Data Augmentation increases significantly the diversity of images available to train the model. It is a great way to generates new images without collecting new images. These new images are generated from existing ones.
 I decided to use different transforms for the validation set and the training set. 
-* For the training set I Resized all the images to 256*256 pixels, then centercropped the images to 224*224. After that, I applied different transforms: random rotation by 10 degrees, random horizontal and vertical flip with a probability of 50%, then I transformed the Pil Image to a transform, and normalized each channel using Imagenet stats (because I used a pretrained model on Imagenet).
+* For the training set I Resized all the images to 256 by 256 pixels, then centercropped the images to 224 by 224. After that, I applied different transforms: random rotation by 10 degrees, random horizontal and vertical flip with a probability of 50%, then I transformed the Pil Image to a transform, and normalized each channel using Imagenet stats (because I used a pretrained model on Imagenet).
 * For the Validation set, I resized the images then centercropped to 224 by 224 pixels. Then transformed the Pil Images to Tensors and Normalized them.
 
 ## Model Building
