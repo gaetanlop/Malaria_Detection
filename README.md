@@ -26,11 +26,11 @@ I created a tool that classifies pediatric chest X-rays to detect pneumonia. One
 ## About the Data
 Link of the dataset: https://www.kaggle.com/iarunava/cell-images-for-detecting-malaria
 
-**What is Malaria:** 
+**What is Malaria:** "Malaria is a serious and sometimes fatal disease caused by a parasite that commonly infects a certain type of mosquito which feeds on humans. People who get malaria are typically very sick with high fevers, shaking chills, and flu-like illness. Although malaria can be a deadly disease, illness and death from malaria can usually be prevented." (https://www.cdc.gov/malaria/about/index.html#:~:text=Malaria%20is%20a%20serious%20and,%2C%20and%20flu%2Dlike%20illness.)
 
-**Medical treatment:** 
+**Symptoms:** 'Malaria causes symptoms that typically include fever, tiredness, vomiting, and headaches. In severe cases, it can cause yellow skin, seizures, coma, or death. Symptoms usually begin ten to fifteen days after being bitten by an infected mosquito. If not properly treated, people may have recurrences of the disease months later.' (https://en.wikipedia.org/wiki/Malaria)
 
-**About the Dataset:** The dataset contains 5,863 chest X-Ray images divided into two categories: Pneumonia and Normal.
+**About the Dataset:** The dataset contains 27558 images of cells blood divided into two categories: Uninfected and Infected.
 
 ## Code and Resources Used
 
@@ -40,11 +40,11 @@ Link of the dataset: https://www.kaggle.com/iarunava/cell-images-for-detecting-m
 
 **Pytorch Documentation:** https://pytorch.org/docs/stable/index.html
 
+**Python Engineer playlist on Pytorch:** https://www.youtube.com/watch?v=EMXfZB8FVUA&list=PLqnslRFeH2UrcDBWF5mfPGpqQDSta6VK4
 
 ## Malaria images Examples
 
 ![alt text](https://github.com/gaetanlop/Malaria_Detection/blob/master/malaria%20data.PNG)
-
 
 ## Data Augmentation Strategy
 Data Augmentation increases significantly the diversity of images available to train the model. It is a great way to generates new images without collecting new images. These new images are generated from existing ones.
