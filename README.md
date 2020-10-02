@@ -4,13 +4,12 @@
 
 **Final Product Hosted On Heroku:** https://malaria-detectorv1.herokuapp.com/
 
-I created a tool that classifies pediatric chest X-rays to detect pneumonia. One way to depict Penumonia is by using chest X-ray images. They are obtain easily but the problem is in radiologic interpretation of images which are not always available. Therefore, such a tool could be use to predict fast and automatically whether or not someone have pneumonia. 
+I created a tool that classifies images of blood cells to detect Malaria. The best way to depict Penumonia is by performing a microscopic examination of blood cells. The problem is in the interpretation of these microscopic images.They are not always experts available to interpret them. Therefore, such a tool could be use to predict fast and automatically whether or not someone has Malaria. 
 
 *   Project done using Pytorch Library.
-*   I created a tool that classifies pediatric chest X-rays to detect pneumonia.
+*   I created a tool that classifies images of blood cells to detect Malaria.
 *   Performed Data preprocessing and Augmentation.
 *   Used transfer learning (pretrained resnet34). 
-*   Used the learning rate finder to find the best learning rate to update the weights. 
 *   Fine-tuned the model.
 *   Built a client facing API using Flask.
 *   Deployed the model on Heroku.
