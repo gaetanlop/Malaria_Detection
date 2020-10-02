@@ -45,10 +45,16 @@ Link of the dataset: https://www.kaggle.com/iarunava/cell-images-for-detecting-m
 This project is divided into two part:
 
 * Training a deep learning model using Pytorch. 
-  * Steps: - 
-           - 
-           - 
-           - 
+  * Steps: - Data augmentation
+  
+           - Data preprocessing: Datasets class, Dataloaders
+           
+           - Creating the model (using transfer learning). Fine-Tuned the model, Trained all the parameters of the neural net, not only the head of the model
+           
+           - Creating the training loop: For each batches:predictions/calculate loss/Gradient descent/ update the weights/
+           
+           - Creating the testing loop: For each batches: predictions, compare with actuals using a particular metric
+           
 * Building and hosting a Flask web app on Heroku.
   * The user can choose an image from its device.
   * After uploading the image, the user just have to press predict and the prediction will appear
