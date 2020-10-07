@@ -15,12 +15,12 @@ I created a tool that classifies images of blood cells to detect Malaria. The be
 *   Deployed the model on Heroku.
 
 
-![alt text](https://github.com/gaetanlop/Malaria_Detection/blob/master/results%20malaria.PNG)
+![alt text](https://github.com/gaetanlop/Malaria_Detection/blob/master/images/results%20malaria.PNG)
 
 ## Demo
 
 **Final Product Hosted On Heroku:** https://malaria-detectorv1.herokuapp.com/
-![alt text](https://github.com/gaetanlop/Malaria_Detection/blob/master/Malaria%20demo.PNG)
+![alt text](https://github.com/gaetanlop/Malaria_Detection/blob/master/images/Malaria%20demo.PNG)
 
 ## About the Data
 Link of the dataset: https://www.kaggle.com/iarunava/cell-images-for-detecting-malaria
@@ -63,7 +63,7 @@ This project is divided into two part:
 
 ## Malaria images Examples
 
-![alt text](https://github.com/gaetanlop/Malaria_Detection/blob/master/malaria%20data.PNG)
+![alt text](https://github.com/gaetanlop/Malaria_Detection/blob/master/images/malaria%20data.PNG)
 
 ## Data Augmentation Strategy
 Data Augmentation increases significantly the diversity of images available to train the model. It is a great way to generates new images without collecting new images. These new images are generated from existing ones.
@@ -74,17 +74,17 @@ I decided to use different transforms for the validation set and the training se
 ## Model Building
 * I used transfer learning (pretrained resnet34). Transfer leaning is a method to initialize the weights of a model based on the weights of another model which was already trained. This technique is good to deal with relatively small datasets like this one. In practice we should nearly always use transfer learning.
 
-![alt text](https://github.com/gaetanlop/Pneumonia-Detection/blob/master/An-example-of-CNN-architecture.png)
+![alt text](https://github.com/gaetanlop/Pneumonia-Detection/blob/master/images/An-example-of-CNN-architecture.png)
 https://www.researchgate.net/figure/An-example-of-CNN-architecture_fig1_320748406
 
 
 ## Model performance
 I decided to save my model at each epoch where the validation accuracy increases. I chosed not to save my model when the validation loss decreases following Jeremy Howard advices in his deep learning course. Indeed, validation loss will first get worse during training because the model gets overconfident, and only later will get worse because it is incorrectly memorizing the data. Thus, the most important thing to look at is our metric, here the accuracy.
 
-![alt text](https://github.com/gaetanlop/Malaria_Detection/blob/master/results%20malaria.PNG)
-![alt_text](https://github.com/gaetanlop/Malaria_Detection/blob/master/classification%20report%20malaria.PNG)
-![alt text](https://github.com/gaetanlop/Malaria_Detection/blob/master/confusion%20matrix%20malaria.PNG)
-![alt text](https://github.com/gaetanlop/Malaria_Detection/blob/master/graph%20loss%20malaria.PNG)
+![alt text](https://github.com/gaetanlop/Malaria_Detection/blob/master/images/results%20malaria.PNG)
+![alt_text](https://github.com/gaetanlop/Malaria_Detection/blob/master/images/classification%20report%20malaria.PNG)
+![alt text](https://github.com/gaetanlop/Malaria_Detection/blob/master/images/confusion%20matrix%20malaria.PNG)
+![alt text](https://github.com/gaetanlop/Malaria_Detection/blob/master/images/graph%20loss%20malaria.PNG)
 
 ## Productionization and Deployment
 I built a client facing API using Flask and deployed it using Heroku.
