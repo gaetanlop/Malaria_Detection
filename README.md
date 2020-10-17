@@ -4,7 +4,7 @@
 
 **Final Product Hosted On Heroku:** https://malaria-detectorv1.herokuapp.com/
 
-I created a tool that classifies images of blood cells to detect Malaria. The best way to depict Malaria is by performing a microscopic examination of blood cells. The problem is in the interpretation of these microscopic images.They are not always experts available to interpret them. Therefore, such a tool could be use to predict fast and automatically whether or not someone has Malaria. 
+I created a tool that classifies images of blood cells to detect Malaria. The best way to depict Malaria is by performing a microscopic examination of blood cells. The problem is in the interpretation of these microscopic images.There are not always experts available to interpret them. Therefore, such a tool could be use to predict fast and automatically whether or not someone has Malaria. 
 
 *   Project done using Pytorch Library.
 *   I created a tool that classifies images of blood cells to detect Malaria.
